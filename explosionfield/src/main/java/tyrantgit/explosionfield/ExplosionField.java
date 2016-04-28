@@ -93,7 +93,7 @@ public class ExplosionField extends View {
         r.offset(-location[0], -location[1]);
         r.inset(-mExpandInset[0], -mExpandInset[1]);
         int startDelay = 100;
-        ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f).setDuration(150);
+        ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f).setDuration(1500);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
 
             Random random = new Random();
@@ -106,7 +106,7 @@ public class ExplosionField extends View {
             }
         });
         animator.start();
-        view.animate().setDuration(150).setStartDelay(startDelay).scaleX(0f).scaleY(0f).alpha(0f).start();
+        view.animate().setDuration(1500).setStartDelay(startDelay).scaleX(0f).scaleY(0f).alpha(0f).start();
         explode(Utils.createBitmapFromView(view), r, startDelay, ExplosionAnimator.DEFAULT_DURATION);
     }
 
